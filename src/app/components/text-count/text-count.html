@@ -1,0 +1,8 @@
+@for (group of results; track $index; let gi = $index) {
+<div>
+  <h4>Group {{ gi + 1 }}</h4>
+  @for (line of group; track $index; let li = $index) {
+  <p>{{ li + 1 }} {{ line }}</p>
+  }
+</div>
+}
