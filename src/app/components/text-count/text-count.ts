@@ -11,11 +11,11 @@ export class TextCountComponent implements OnChanges {
 
   ngOnChanges(changes: SimpleChanges): void {
     if ('outputValues' in changes) {
-      this.results = this.outputValues.map((v) => this.compute(v));
+      this.results = this.outputValues.map((v) => this.render(v));
     }
   }
 
-  private compute(values: TextCount): string[] {
+  private render(values: TextCount): string[] {
     const lines: string[] = [];
     for (let i = 1; i <= values.limit; i++) {
       const matched: string[] = [];

@@ -1,6 +1,0 @@
-{
-  "dataSets": [
-    { "limit": 45, "nums": [3, 5, 7], "texts": ["Eric", "Feldberg", "Bella"] },
-    { "limit": 30, "nums": [2, 6, 9], "texts": ["Las Vegas", "LA", "Chicago"] }
-  ]
-}

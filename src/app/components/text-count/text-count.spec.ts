@@ -22,7 +22,7 @@ describe('TextCountComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('renders the correct number of groups and headings', () => {
+  it('renders groups and headings', () => {
     const data: TextCount[] = [
       { limit: 3, nums: [2], texts: ['Even'] },
       { limit: 2, nums: [2], texts: ['Even'] },
@@ -37,7 +37,7 @@ describe('TextCountComponent', () => {
     expect(headings[1].textContent?.trim()).toBe('Group 2');
   });
 
-  it('renders the correct number of lines per group', () => {
+  it('renders number of lines per group', () => {
     const data: TextCount[] = [
       { limit: 5, nums: [3, 5], texts: ['Fizz', 'Buzz'] },
       { limit: 3, nums: [2], texts: ['Even'] },
@@ -64,7 +64,7 @@ describe('TextCountComponent', () => {
     expect(group2Lines[1].textContent?.trim()).toBe('2 Even');
   });
 
-  it('handles repeating text safely (track by $index) and still renders correctly', () => {
+  it('handles repeating text', () => {
     const data: TextCount[] = [{ limit: 4, nums: [2], texts: ['Even'] }];
 
     fixture.componentRef.setInput('outputValues', data);
@@ -78,7 +78,7 @@ describe('TextCountComponent', () => {
     expect(lines[3].textContent?.trim()).toBe('4 Even');
   });
 
-  it('recomputes and updates when the input changes', () => {
+  it('rerenders on changes', () => {
     const first: TextCount[] = [{ limit: 3, nums: [3], texts: ['Three'] }];
     fixture.componentRef.setInput('outputValues', first);
     fixture.detectChanges();
@@ -102,7 +102,7 @@ describe('TextCountComponent', () => {
     expect(headings[1].textContent?.trim()).toBe('Group 2');
   });
 
-  it('renders nothing when input is empty', () => {
+  it('renders nothing if empty', () => {
     fixture.componentRef.setInput('outputValues', []);
     fixture.detectChanges();
 
