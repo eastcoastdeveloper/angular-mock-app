@@ -12,7 +12,3 @@ A standalone Angular demo app that dynamically counts numbers and replaces them 
 - **Modern Template Syntax** – Uses `@for` and `@if`
 - **Unit Tests** – Jasmine/Karma specs for components and services
 - **HTTP Testing** – Uses `provideHttpClientTesting()` for isolated service tests
-
----
-
-## Project Structure
